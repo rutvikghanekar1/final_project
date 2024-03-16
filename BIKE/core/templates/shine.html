@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container  ">                        
+    <div class="row">
+                               
+        {% for dc in shine_category %}
+        <div class="col-sm-4   ">
+          <!-- <a href="" style="text-decoration: none; ">         -->
+            <div class="card " style="width: 18rem; height:20rem">
+                <a href="{% url "sportbikedetails" dc.id %}"><img class="card-img-top " src="{{dc.bike_image.url}}" alt="Card image cap"></a>
+                <div class="card-body">
+                  <h5 class="card-title">{{dc.name}}</h5>
+                   <div class="text-center">
+                        {% comment %} <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i>{{dc.discounted_price}} <small class="fw-light rupee"> {{dc.selling_price}}</small> <small class="text-danger">(% off)</small></h5>  {% endcomment %}
+                        <!-- <button style="background-color: rgb(255, 55, 0);" class="button" onclick="addToCart">Add to Cart</button> -->
+
+                        <!-- Buy Now button -->
+                        <!-- <button class="button" onclick="buyNow">Buy Now</button> -->
+                    </div>
+                </div>
+            </div>
+          </a>
+        </div>       
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

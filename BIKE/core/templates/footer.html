@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+  
+    .footer {
+      background-color: #171313;
+      color: #fff;
+      padding: 20px;
+      text-align:end;
+      position:relative;
+
+    }
+  
+    .waves {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      overflow: hidden;
+    }
+  
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        #1a1a1a 10px,
+        #1a1a1a 20px
+      );
+    }
+  
+    .social-icon {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .social-icon__item {
+      margin: 0 10px;
+    }
+  
+    .social-icon__link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .menu__item {
+      margin: 0 15px;
+    }
+  
+    .menu__link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(36, 29, 29, 0.2);
+  text-align: center;
+  padding: 15px;
+}
+
+.waves {
+  position: relative;
+}
+
+  </style>
+  
+   <body>
+    <footer class="footer" style="background-color: black;">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="{% url "facebook" %}">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="{% url "instagram" %}">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="menu">
+        
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Terms and condition</a></li>
+        <li class="menu__item"><a class="menu__link" href="{% url "contact" %}">Contact</a></li>
+  
+      </ul>
+      <p></p>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 project:
+        <a class="text-white" href="/">Rutvik Vijay Ghanekar</a>
+        <script style="color: red;">
+          function clik(){
+            alert("THANK YOU FOR VISIT")
+          }
+        </script>
+        <button type="button" class="btn btn-danger" onmouseenter="clik()" > THANK YOU</button><br><br>
+        
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+   </body>
+   </html>
+
+
+
+
+
+
+  
+  

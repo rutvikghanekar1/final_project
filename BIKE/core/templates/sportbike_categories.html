@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container" style="background-color:rgb(83, 83, 100) ;">                         
+    <div class="row">
+                               
+        {% for dc in sportbike_category %}
+        <div class="col-sm-6 ">
+          <!-- <a href="" style="text-decoration: none; ">         -->
+            <div class="card " style="width: 18rem; height:20rem">
+                <a href="{% url "sportbikedetails" dc.id %}"><img class="card-img-top " src="{{dc.bike_image.url}}" alt="Card image cap"></a>
+                <div class="card-body">
+                  <h5 class="card-title">{{dc.name}}</h5>
+                   <div class="text-center">
+                        <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i>{{dc.discounted_price}} <small class="fw-light rupee"> {{dc.selling_price}}</small> <small class="text-danger">(% off)</small></h5> 
+                       
+                    </div>
+                </div>
+            </div>
+          </a>
+        </div>       
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container " style="background-color: rgb(83, 83, 100);">                         <!-- we have created new container class-->
+    <div class="row">
+                               <!-- we have created row class-->
+        {% for dc in electricscoty_category %}
+        <div class="col-sm-6   ">
+          <!-- <a href="" style="text-decoration: none; ">         -->
+            <div class="card " style="width: 18rem; height:20rem">
+                <a href="{% url "electricscotydetails" dc.id %}"><img class="card-img-top " src="{{dc.bike_image.url}}" alt="Card image cap"></a>
+                <div class="card-body">
+                  <h5 class="card-title">{{dc.name}}</h5>
+                   <div class="text-center">
+                        <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i>{{dc.discounted_price}} <small class="fw-light rupee"> {{dc.selling_price}}</small> <small class="text-danger">(% off)</small></h5> 
+                        {% comment %} <button style="background-color: rgb(255, 55, 0);" class="button" onclick="addToCart">Add to Cart</button> {% endcomment %}
+
+                        <!-- Buy Now button -->
+                        {% comment %} <button class="button" onclick="buyNow">Buy Now</button> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+          </a>
+        </div>       
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
